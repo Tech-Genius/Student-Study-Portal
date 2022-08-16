@@ -1,0 +1,20 @@
+{% extends 'dashboard/base.html' %} 
+{% block title %} My Notes {% endblock title %}
+{% load static %} 
+{% block content %}
+
+
+<div class="contain" style="padding-top: 100px;">
+<div class="section">
+    <div class="title">
+        <h2>{{notes.title}}</h2>
+    </div>
+
+    <hr>
+    <p class="description">
+        {{notes.description}}
+    </p>
+    <hr>
+</div>
+</div>
+{% endblock content %}

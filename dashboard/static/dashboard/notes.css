@@ -1,0 +1,48 @@
+.notebox .top{
+    background-color: rgb(133, 204, 231);
+    padding: 15px 0px;
+}
+.notebox .top:hover {
+    background: rgb(11, 22, 83) !important;
+    color: whitesmoke !important;
+    transition: 0.1s ease-in;
+}
+.notebox .body{
+    background-color: white;
+    padding: 30px 0px;
+}
+
+.notebox{
+    box-shadow: 15px 15px 10px rgb(78, 77, 77);
+ 
+
+}
+.notebox{
+    width: 90%;
+    margin: 15px 4%;
+
+}
+.notebox hr{
+    color: rgba(220, 220, 220, 0.233);
+}
+.notebox .footer{
+    padding: 20px 0px;
+   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:850px){
+     .notebox{
+        margin: 20px auto;
+    }
+}

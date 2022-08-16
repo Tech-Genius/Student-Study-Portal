@@ -1,0 +1,60 @@
+
+.box{
+    box-shadow: 15px 15px 10px rgb(78, 77, 77);
+ 
+
+}
+a .box{
+    width: 90%;
+    margin: auto 4%;
+    height: 400px;
+}
+.box img{
+    width: 100%;
+    height: 200px;
+}
+
+
+a .box img:hover {
+    background: rgb(11, 22, 83) !important;
+    color: whitesmoke !important;
+    transition: 0.1s ease-in;
+}
+
+a{
+    text-decoration: none !important;
+    color: black;
+}
+
+a:hover {
+    text-decoration: none;
+    color: black;
+}
+.box_holder{
+    width: 95%;
+    margin: 0px 2.5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  
+    
+}
+
+
+
+@media screen and (max-width:850px){
+    .box_holder{
+        grid-template-columns: 1fr 1fr;
+    }
+     a .box{
+        margin: 20px auto;
+    }
+} 
+@media screen and (max-width:400px){
+    .box_holder{
+        grid-template-columns: 1fr;
+    }
+
+} 
+
+
+

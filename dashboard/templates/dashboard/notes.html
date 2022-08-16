@@ -1,0 +1,42 @@
+{% extends 'dashboard/base.html' %} 
+{% block title %} My Notes {% endblock title %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<div class="contain" style="padding-top: 120px;">
+    <h3 style="text-align: center;">Hi {{request.user}}, These Are Your Saved Notes</h3>
+    <div class="box_holder">
+    {% for note in notes %}
+   
+        <div class="notebox">
+        <a href="{% url 'notes-detail' note.id %}">
+            <div class="top">{{note.title}}</div>
+            <div class="body">{{note.description|slice:"0: 100"}}</div>
+            <hr style="margin: 0;">
+   <div class="footer" style="text-align: center;"><a href="{% url 'delete-note' note.id %}"><i  class="fa fa-trash fa-2x"></i></a></div>
+        </div>
+
+{% endfor %}
+    </div>
+</div>
+        <br><br>
+
+  
+<br><br>
+<div class="container">
+    <form method="POST">
+        {% csrf_token %}
+        <fieldset class="form-group">
+            <legend class="border-bottom mb-4">Create Notes</legend>
+        </fieldset>
+        <div class="contain" style="width: 90%;">{{form | crispy}}</div>
+        <div class="form-group">
+            <button href="" class="btn btn-outline-info" type="submit">
+                Create
+            </button>
+        </div>
+    </form>
+</div>
+
+{% endblock content %}

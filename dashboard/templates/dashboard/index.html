@@ -1,0 +1,37 @@
+{% extends 'dashboard/base.html' %}
+{% block title %} Student Study Portal {% endblock title %}
+{% load static %}
+
+{% block content %}
+<div class="background">
+  <div class="background_contain">
+     
+  </div>
+</div>
+
+<div class="body_content">
+  <div class="text_intro"><h3>How It Works</h3></div>
+<div class="info">
+<div class="icon_bar">
+  <i class="fa fa-pencil fa-2x"></i>
+  <h3>Grab A Web Pen Right Now</h3>
+</div>
+<div class="icon_bar">
+  <i class="fa fa-book fa-2x"></i>
+  <h3>List Out Your Daily Duties And Their Due Time</h3>
+</div>
+<div class="icon_bar">
+  <i class="fa fa-bell fa-2x"></i>
+  <h3>Get Notified An Hour Before Their Due Time</h3>
+</div>
+</div>
+<div class="reg" >
+  {% if user.is_authenticated %}
+  <a><button>Get Started</button></a>
+
+{% else %}
+<a href="{% url 'register' %}"><button>Get Started</button></a>
+{% endif %}
+</div>
+</div>
+{% endblock content %}

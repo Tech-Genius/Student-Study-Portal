@@ -1,0 +1,29 @@
+.youtube{
+display: grid;
+grid-template-columns: 1fr 2fr;
+margin: 40px 0px;
+text-align: start;
+background-color: rgba(255, 255, 255, 0.253);
+box-shadow: 5px 3px 3px 3px grey;
+padding: 10px 0px;
+}
+.thumb{
+    margin: 0px 3%;
+}
+.youtube img{
+    width: 100%;
+
+
+}
+.desc{
+    margin: 0px 3%;
+}
+
+@media screen and (max-width:850px){
+    .youtube{
+        grid-template-columns: 1fr;
+    }
+    .desc{
+        margin-top: 20px;
+    }
+}

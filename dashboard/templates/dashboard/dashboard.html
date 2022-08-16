@@ -1,0 +1,95 @@
+{% extends 'dashboard/base.html' %} 
+{% block title %} My Dashboard {% endblock title %}
+{% load static %} 
+{% block content %}
+
+<div class="contain" style="padding-top:250px; text-align: center;">
+  <h3>Welcome {{request.user}}, this is your dashboard</h3>
+
+  <hr> <br>
+  <div class="box_holder">
+    <a href="{% url 'notes' %}">
+    <div class="box">
+      <img src="/static/dashboard/images/notes.jpg" alt="Notes image">
+      <h5>Notes</h5>
+      <h5>Create notes now, then come back to read them later</h5>
+    </div>
+  </a>
+
+
+<a href="{% url 'homework' %}">
+    <div class="box">
+      <img src="/static/dashboard/images/homework.jpg" alt="Homework image">
+      <h5>Homework</h5>
+      <h5>Add homeworks and assign them deadlines. They will be displayed prioritised by deadlines</h5>
+    </div>
+  </a>
+
+<a href="{% url 'youtube' %}">
+  <div class="box">
+    <img src="/static/dashboard/images/youtube.jpg" alt="Youtube image">
+    <h5>Youtube</h5>
+    <h5>
+      Search Youtube and select your desired video to play it on youtube</h5>
+  </div>
+</a>
+
+
+<a href="{% url 'todo' %}">
+  <div class="box">
+    <img src="/static/dashboard/images/todo.jpg" alt="Todo image">
+    <h5>To Do</h5>
+    <h5>
+      Add your to-do lists for your day and remove them as you finish
+    </h5>
+  </div>
+</a>
+  </div>
+
+  
+  
+  <br><br><br>
+  
+  <div class="box_holder">
+<a href="{% url 'books' %}">
+  <div class="box">
+    <img src="/static/dashboard/images/books.jpg" alt="Books image">
+    <h5>Books</h5>
+    <h5>Browse books from a list of neatly organised book menu</h5>
+  </div>
+</a>
+
+
+
+<a href="{% url 'dictionary' %}">
+  <div class="box">
+    <img src="/static/dashboard/images/dictionary.jpg" alt="Dictionary image">
+    <h5>Dictionary</h5>
+    <h5> A vocabulary from a book is troubling you? No problem, enter the word, and the meaning will be displayed
+      almost instantaneously.</h5>
+  </div>
+</a>
+
+
+<a href="{% url 'wiki' %}">
+  <div class="box">
+    <img src="/static/dashboard/images/wiki.jpg" alt="Wiki image">
+    <h5>WikiPedia</h5>
+    <h5>Homework and Assignments? Search wikipedia to get fast results</h5>
+  </div>
+</a>
+
+
+
+<a href="{% url 'conversion' %}">
+  <div class="box">
+    <img class="card-img-top" src="/static/dashboard/images/conversion.jpg" alt="Conversion image">
+    <h5>Conversion</h5>
+    <h5>  Check out the conversion table, that helps you to convert measurements to more familiar ones of your choice.
+    </h5>
+  </div>
+</a>
+</div>
+
+</div>
+{% endblock content %}
